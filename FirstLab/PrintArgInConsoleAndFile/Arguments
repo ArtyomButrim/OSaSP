@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $#>0 ]]
+then
+    echo "$@" > Arguments.txt
+    echo "Next argument has been entered"
+    for i in "$@"
+        do
+            echo "$i"
+	done
+else
+    echo "No one argument has been entered"
+fi
