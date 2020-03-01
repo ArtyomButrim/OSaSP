@@ -1,0 +1,13 @@
+#!/bin/bash
+
+filename="$1"
+exefilename="$2"
+
+if gcc "$filename" -o "$exefilename"
+then
+    echo "Success compiled"
+    echo "Running $exefilename"
+    ./"$exefilename"
+else
+    echo "Error!!!"
+fi
