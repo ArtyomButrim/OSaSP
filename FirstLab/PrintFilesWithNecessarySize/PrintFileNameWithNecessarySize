@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ERR=$(mktemp)
+exec 6>&2 2>$ERR
+
+find $(readlink -f $3) -maxdepth 1 -type f -size +$1c -size -$2c -printf '%p %s\n'| head -n 20
+
+exec 2>&6 6>&-
+sed "s/.[a-zA-Z]*:/'$(basename $0):/"<$ERR 1>&2
+rm $ERR
