@@ -1,4 +1,4 @@
 *.exe
 *.txt
-*.idea
-/cmake-buid-debug
+*.idea/
+cmake-buid-debug/
