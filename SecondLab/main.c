@@ -12,8 +12,10 @@
 #include "main.h"
 
 #define BUFFER_SIZE (32*1024*1024)
+#define STR_SIZE 512
 
 int main(int argc, char *argv[]) {
+
     char *executableName = basename(argv[0]);
 
     if (executableName == NULL)
@@ -141,9 +143,9 @@ int main(int argc, char *argv[]) {
             }
 
             if (areEqual) {
-                fprintf(stdout, "%s %ld %s %lo %ld ", firstFilePath, firstFileInfo->fileSize, firstFileInfo->creationDate, firstFileInfo->accessType, firstFileInfo->indexNumberDescriptor);
+                fprintf(stdout, "%s %ld %s %lo %ld", firstFilePath, firstFileInfo->fileSize, firstFileInfo->creationDate, firstFileInfo->accessType, firstFileInfo->indexNumberDescriptor);
                 fprintf(stdout," == ");
-                fprintf(stdout, " %s %ld %s %lo %ld\n", secondFilePath, secondFileInfo->fileSize, secondFileInfo->creationDate, secondFileInfo->accessType, secondFileInfo->indexNumberDescriptor);
+                fprintf(stdout, "%s %ld %s %lo %ld\n", secondFilePath, secondFileInfo->fileSize, secondFileInfo->creationDate, secondFileInfo->accessType, secondFileInfo->indexNumberDescriptor);
 
                 fprintf(results, "%s %ld %s %lo %ld == %s %ld %s %lo %ld\n", firstFilePath, firstFileInfo->fileSize, firstFileInfo->creationDate, firstFileInfo->accessType, firstFileInfo->indexNumberDescriptor, secondFilePath, secondFileInfo->fileSize, secondFileInfo->creationDate, secondFileInfo->accessType, secondFileInfo->indexNumberDescriptor);
                 free(firstFileInfo->fileContent);
@@ -286,7 +288,7 @@ FileInfo *getFileInfo (char *filePath, int *buffersAmount) {
         return NULL;
     }
 
-    string = (char *)malloc(sizeof(char)*bufferSize);
+    string = (char *)malloc(sizeof(char)*STR_SIZE);
 
     if (string == NULL) {
         fclose(file);
@@ -294,7 +296,7 @@ FileInfo *getFileInfo (char *filePath, int *buffersAmount) {
     }
 
     localtime_r(&fileInfo.st_mtime,&lt);
-    strftime(string,sizeof(char*)*bufferSize,"%d %b %Y", &lt);
+    strftime(string,sizeof(char*)*STR_SIZE,"%d.%m.%Y", &lt);
 
     returnCode = fclose(file);
 
