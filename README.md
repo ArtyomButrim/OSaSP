@@ -28,7 +28,7 @@ command line arguments. Print to the console the first 20 files found
 in the form: full path, file name, its size.
 
 SecondLab
-Найти совпадающие по содержимому файлы в двух заданных каталогах (аргументы 
-1 и 2 командной строки) и всех их подкаталогах. Вывести на консоль и в файл 
-(аргумент 3 командной строки) полный путь, размер, дату создания, права доступа, 
-номер индексного дескриптора.
+Find matching files in two specified directories (arguments 1 and 2 of the 
+command line) and all their subdirectories. Print the full path, size, creation 
+date, access rights, inode number to the console and to the file (command 
+line argument 3).
