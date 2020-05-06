@@ -26,3 +26,9 @@ Write a script to search for files of a given size in a given directory
 The range (min-max) of file sizes is set by the user as the first and second 
 command line arguments. Print to the console the first 20 files found 
 in the form: full path, file name, its size.
+
+SecondLab
+Найти совпадающие по содержимому файлы в двух заданных каталогах (аргументы 
+1 и 2 командной строки) и всех их подкаталогах. Вывести на консоль и в файл 
+(аргумент 3 командной строки) полный путь, размер, дату создания, права доступа, 
+номер индексного дескриптора.
