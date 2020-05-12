@@ -16,6 +16,8 @@
 
 int main(int argc, char *argv[]) {
 
+    char *locale = setlocale(LC_ALL, "ru_RU.utf8");
+
     char *executableName = basename(argv[0]);
 
     if (executableName == NULL)

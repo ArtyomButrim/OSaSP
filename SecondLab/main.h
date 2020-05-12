@@ -16,6 +16,7 @@
 #include <bits/types/FILE.h>
 #include <time.h>
 #include <limits.h>
+#include <locale.h>
 
 #include "list.h"
 
