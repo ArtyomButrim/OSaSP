@@ -1,34 +1,34 @@
 # OSaSP
 
-FirstLab/PrintHelloLinux
-Write a 1.c program that displays the phrase “HELLO Linux”.
+###FirstLab:***
+```
+1. PrintHelloLinux:
+Написать программу ***1.с***, которая выводит на экран фразу ***"Hello Linux"***.
 
-FirstLab/PrintArgInConsoleAndFile
-Write a script that displays all the command line arguments 
-to the console and to the file.
+2. PrintArgInConsoleAndFile:
+Написать скрипт, выводящий на консоль и в файл все аргументы командной строки
 
-FirstLab/PrintFileNameWithItExtention
-Write a script that outputs to a file (the file name is specified 
-by the user as the first command line argument) the names of all 
-files with the specified extension (third command line argument) 
-from the specified directory (the directory name is specified by 
-the user as the second command line argument).
+3. PrintFileNameWithItExtention: 
+Написать скрипт, выводящий в файл( имя файла задаётся пользователем*** 
+в качестве первого параметракомандной строки) имена всех файлов с заданным расширением(третий параметр*** 
+командной строки) из заданного каталога(имя каталлога задаётся пользователем в качестве второго***
+аргумента командной строки).
 
-FirstLab/CopileFile
-Write a script that compiles and runs the program (the name of 
-the source file and the result exe file is set by the user as 
-command line arguments). In case of compilation errors, display 
-an error message on the console and do not run the program for execution.
+4. CopileFile:
+Написать скрипт, компилирующий и запускающий программу (имя исходного файла и***
+***exe***-файла результата задаётся пользователем в качестве аргументов командной строки). В случае***
+ошибок при компиляции вывести на консоль сообщение об ошибках и не запускать программу на выполнение.
 
-FirstLab/PrintFilesWithNecessarySize
-Write a script to search for files of a given size in a given directory 
-(the directory name is set by the user as the third command line argument). 
-The range (min-max) of file sizes is set by the user as the first and second 
-command line arguments. Print to the console the first 20 files found 
-in the form: full path, file name, its size.
+5. PrintFilesWithNecessarySize: 
+Написать скрипт для поиска файлов заданного размера в заданном***
+каталоге (имя каталога задаётся пользователем в качестве третьего аргумента командной строки).***
+Диапазон (мин.- мах.) размеров файлов задаётся пользователем в качестве первого и второго аргумента***
+командной строки. Вывести на консоль первые найденные 20 файлов в виде: полный путь, имя файла, его размер.  
+```
 
-SecondLab
-Find matching files in two specified directories (arguments 1 and 2 of the 
-command line) and all their subdirectories. Print the full path, size, creation 
-date, access rights, inode number to the console and to the file (command 
-line argument 3).
+###SecondLab:***
+```
+Найти совпадающие по содержимому файлы в двух заданных каталогах (аргументы 1 и 2 командной строки)***
+и всех их подкаталогах. Вывести на консоль и в файл (аргумент 3 командной строки) полный путь, размер,***
+дату создания, права доступа, номер индексного дескриптора.
+```
